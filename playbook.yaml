@@ -1,0 +1,23 @@
+- name: Build and Deploy Docker Container
+  hosts: docker
+  remote_user: ubuntu/root
+  become: true
+  gather_facts: false
+
+  tasks:
+
+    - name: Build Docker image
+      docker_image:
+        name: lee
+        tag: latest
+        source: build
+        build:
+          path: /home/ubuntu/project
+
+    - name: Run container
+      docker_container:
+        name: lee-container
+        image: lee:latest
+        state: started
+        ports:
+          - "80:80"
