@@ -9,6 +9,14 @@
 
 This project demonstrates a **real-world CI/CD pipeline** using **Jenkins, Ansible, Docker, and GitHub Webhooks** deployed on **AWS EC2 instances**.
 
+
+## Architecture Diagram
+
+<img width="963" height="404" alt="image" src="https://github.com/user-attachments/assets/9b1d239b-8591-488d-bad8-0e8c802cef9d" />
+
+
+
+
 ### Core Idea
 > Any code change pushed to GitHub should automatically trigger Jenkins, which then uses Ansible to build a Docker image and deploy a container on a remote Docker server.
 
